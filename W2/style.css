@@ -1,0 +1,221 @@
+@font-face {
+  font-family: yekanbakh;
+  src: url(Font/YekanBakh/woff/Yekan-Bakh-FA-04-Regular.woff) format("woff"),
+    url(Font/YekanBakh/tff/AnyConv.com__Yekan-Bakh-FA-04-Regular.ttf)
+      format("ttf");
+  font-weight: light;
+}
+@font-face {
+  font-family: yekanbakh;
+  src: url(Font/YekanBakh/woff/Yekan-Bakh-FA-07-Heavy.woff) format("woff"),
+    url(Font/YekanBakh/tff/AnyConv.com__Yekan-Bakh-FA-07-Heavy.ttf)
+      format("ttf");
+  font-weight: bold;
+}
+
+:root {
+  --primary-color: #8a6ef8;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: yekanbakh, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+.main-sections_box {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 1.25rem;
+  padding: 0.5rem 1.5rem;
+}
+#bootcamp_menu {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 1px dashed #6308fd33;
+  border-radius: 21px;
+  padding: 0.5rem 1.5rem;
+  min-height: 4rem;
+  position: sticky;
+  top: 0;
+  background: #fff;
+}
+#bootcamp_menu > a {
+  text-decoration: none;
+  color: #000;
+}
+#bootcamp_menu > a:active {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+#Introduction p,
+#Who_Would_Get_Best > p {
+  line-height: 2rem;
+  text-align: justify;
+  margin-top: 1rem;
+}
+#Introduction > h3,
+#Who_Would_Get_Best > h3 {
+  line-height: 2.5rem;
+  font-size: 1.25rem;
+}
+#Introduction,
+#Who_Would_Get_Best {
+  padding-top: 80px;
+}
+#Advantages {
+  padding-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.75rem;
+}
+.Advantages_title {
+  margin: auto;
+}
+.Advantages_title * {
+  display: inline-block;
+  text-align: center;
+  font-size: 1.75rem;
+}
+.Advantages_title h2 {
+  color: var(--primary-color);
+}
+.Advantages_items {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+.Advantage-item_box {
+  background-color: #fff;
+  box-shadow: 0px 0px 22px 10px #e4a4ff29;
+  border-radius: 1rem;
+  padding: 12px 7px;
+  display: flex;
+  flex-flow: column wrap;
+  gap: 10px;
+}
+
+.Advantage-item_box > p {
+  font-size: 14px;
+  margin: 14px 0;
+  line-height: 1.25rem;
+}
+.Advantage-item_box > h4 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin: 1.33rem 0;
+}
+.Advantage-item_box>img{
+  height: 38px;
+}
+
+#Overview {
+  background-color: var(--primary-color);
+  border-radius: 1.5rem;
+  padding: 2.5rem 1.25rem 1rem;
+  display: flex;
+  gap: 1rem;
+  flex-flow: column wrap;
+  margin-top: 80px;
+}
+.Overview_title {
+  display: flex;
+}
+.Overview_title > h3 {
+  display: inline-block;
+  font-size: 1.5rem;
+  color: #fff;
+}
+.Overview_title > img {
+  height: 2rem;
+}
+.Overview_Course-titles {
+  background-color: #fff;
+  padding: 1.25rem 1rem;
+  border-radius: 1.5rem;
+  font-size: 14px;
+  font-weight: 700;
+}
+.Overview_Course-titles:hover{
+  cursor: pointer;
+}
+.Overview_Course-titles > summary {
+  list-style: none;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.Overview_Course-titles > summary::-webkit-details-marker {
+  display: none;
+}
+
+.Overview_Course-titles > summary::before {
+  content: url(/Images/Icons/icons8-expand-arrow-down-26.png);
+}
+
+.Overview_Course-titles[open] > summary::before {
+  content: url(Images/Icons/icons8-collapse-arrow-up-26.png); 
+}
+.Overview_Course-titles[open] > summary{
+color: var(--primary-color);
+}
+
+.Overview_Course-titles > summary>img{
+  height: 1.5rem;
+}
+.Overview_Course-titles>ul>li{
+  font-size: 12px;
+  font-weight: 400;
+  list-style: none;
+}
+/*
+.main{
+  display: flex;
+  flex-direction: row-reverse;
+}
+.bootcamp_aside{
+  display: flex;
+  flex-flow: column wrap ;
+  gap: 1.75rem;
+  justify-content: center;
+  align-items: center;
+  z-index: 1200;
+  position: sticky;
+  top: 10px;
+  min-width: 330px;
+  width: fit-content;
+  height: fit-content;
+  background-color: #fff;
+
+}
+*/
+@media screen and (min-width: 1024px) {
+  .main {
+    width: 80vw;
+    padding: auto;
+    margin: auto auto auto 10vw;
+  }
+  #bootcamp_menu > a {
+    font-size: 20px;
+  }
+  .main-sections_box {
+    margin-left: 10vw;
+  }
+  #Introduction > h3,
+  #Who_Would_Get_Best > h3 {
+    font-size: 1.75rem;
+  }
+  .Overview_Course-titles {
+    font-size: 22px;
+    font-weight: 700;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .Advantages_items {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}

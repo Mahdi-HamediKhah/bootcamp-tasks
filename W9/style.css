@@ -1,0 +1,120 @@
+@font-face {
+  font-family: yekanbakh;
+  src: url(Font/YekanBakh/woff/Yekan-Bakh-FA-04-Regular.woff) format("woff"),
+    url(Font/YekanBakh/tff/AnyConv.com__Yekan-Bakh-FA-04-Regular.ttf)
+      format("ttf");
+  font-weight: light;
+}
+@font-face {
+  font-family: yekanbakh;
+  src: url(Font/YekanBakh/woff/Yekan-Bakh-FA-07-Heavy.woff) format("woff"),
+    url(Font/YekanBakh/tff/AnyConv.com__Yekan-Bakh-FA-07-Heavy.ttf)
+      format("ttf");
+  font-weight: bold;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: yekanbakh, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+#main {
+  width: 100%;
+  height: 100vh;
+}
+.container {
+  margin: 0 auto;
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 100%;
+}
+.container > h1 {
+  height: 10vh;
+  min-height: 10vh;
+  width: 90vw;
+  margin: 0 auto;
+  text-align: center;
+}
+.color-generator {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  height: 80vh;
+  width: 100%;
+  margin: 0 auto;
+  gap: 1rem;
+  justify-content: space-between;
+  max-width: 100%;
+}
+.boxs {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 100%;
+}
+
+.ready-colors,
+.input-colors {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.input-colors > img {
+  display: none;
+}
+.color-box {
+  height: 50vh;
+  background-color: aqua;
+  margin: 10px;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+}
+.color-inputs {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.color-code * {
+  direction: ltr;
+  margin: 0 auto;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  padding-left: 20px;
+}
+.color-box > div {
+  margin: 0 auto;
+  color: black;
+  font-weight: bold;
+}
+@media (max-width: 1200px) {
+  .color-generator {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .color-box {
+    height: 45vh;
+  }
+}
+
+@media (max-width: 900px) {
+  .color-generator {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .color-box {
+    height: 45vh;
+  }
+}
+
+@media (max-width: 600px) {
+  .color-generator {
+    grid-template-columns: 1fr;
+  }
+  .color-box {
+    height: 45vh;
+  }
+}
